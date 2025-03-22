@@ -41,8 +41,8 @@ body {
   /* Grid */
   .grid {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(4, 120px); /* Larger cards */
+    grid-template-rows: repeat(4, 120px); /* Larger cards */
     gap: 10px;
     margin-bottom: 2rem;
   }
@@ -79,11 +79,12 @@ body {
   .card .front {
     background: rgba(255, 255, 255, 0.2);
     transform: rotateY(180deg);
+    font-size: 3rem; /* Larger icon size */
   }
   
   .card .back {
     background: rgba(255, 255, 255, 0.1);
-    font-size: 2rem;
+    font-size: 2rem; /* Larger question mark size */
     color: #00ffcc;
   }
   
@@ -114,11 +115,15 @@ body {
   /* Responsive Design */
   @media (max-width: 600px) {
     .grid {
-      grid-template-columns: repeat(4, 80px);
-      grid-template-rows: repeat(4, 80px);
+      grid-template-columns: repeat(4, 80px); /* Smaller cards for mobile */
+      grid-template-rows: repeat(4, 80px); /* Smaller cards for mobile */
+    }
+  
+    .card .front {
+      font-size: 2rem; /* Smaller icon size for mobile */
     }
   
     .card .back {
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* Smaller question mark size for mobile */
     }
   }
